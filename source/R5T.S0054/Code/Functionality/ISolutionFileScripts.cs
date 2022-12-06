@@ -1,6 +1,6 @@
 using System;
 using System.Threading.Tasks;
-using R5T.F0000;
+
 using R5T.T0132;
 
 
@@ -9,6 +9,24 @@ namespace R5T.S0054
 	[FunctionalityMarker]
 	public partial interface ISolutionFileScripts : IFunctionalityMarker
 	{
+        public async Task UpgradeSolutionFile_ToVS2022()
+        {
+            /// Inputs.
+            var solutionFilePath =
+                //Z0019.SolutionFilePaths.Instance.Temp
+                @"C:\Code\DEV\Git\GitHub\SafetyCone\R5T.S0031\source\R5T.S0031.sln"
+                ;
+
+            /// Run.
+            // Create a backup.
+            F0002.FileSystemOperator.Instance.CreateBackupFile(
+                solutionFilePath);
+
+            // Now upgrade.
+            await F0085.SolutionFileOperations.Instance.UpgradeSolutionFile_ToVS2022(
+                solutionFilePath);
+        }
+
 		public async Task CreateNewWithProjectReference()
 		{
             /// Inputs.

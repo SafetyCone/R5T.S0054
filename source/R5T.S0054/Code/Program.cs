@@ -11,7 +11,8 @@ namespace R5T.S0054
             //SolutionFileScripts.Instance.GenerateNewEmpty();
             //await SolutionFileScripts.Instance.CreateNew_Initial();
             //await SolutionFileScripts.Instance.CreateNew_VS2022();
-            await SolutionFileScripts.Instance.CreateNewWithProjectReference();
+            //await SolutionFileScripts.Instance.CreateNewWithProjectReference();
+            await SolutionFileScripts.Instance.UpgradeSolutionFile_ToVS2022();
         }
     }
 }
