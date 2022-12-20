@@ -8,11 +8,11 @@ namespace R5T.S0054
     {
         static async Task Main()
         {
-            //SolutionFileScripts.Instance.GenerateNewEmpty();
-            //await SolutionFileScripts.Instance.CreateNew_Initial();
-            //await SolutionFileScripts.Instance.CreateNew_VS2022();
-            //await SolutionFileScripts.Instance.CreateNewWithProjectReference();
-            await SolutionFileScripts.Instance.UpgradeSolutionFile_ToVS2022();
+            //await SolutionFileScripts.Instance.New_Empty();
+            //await SolutionFileScripts.Instance.New_Initial();
+            //await SolutionFileScripts.Instance.New_VS2022();
+            await SolutionFileScripts.Instance.New_WithProjectReference();
+            //await SolutionFileScripts.Instance.UpgradeSolutionFile_ToVS2022();
         }
     }
 }
